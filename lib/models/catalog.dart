@@ -10,11 +10,13 @@ class CatalogModel {
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc")
   ];
 
-  static final catModel = CatalogModel._internal();
+  //singe
 
-  CatalogModel._internal();
+  // static final catModel = CatalogModel._internal();
 
-  factory CatalogModel() => catModel;
+  // CatalogModel._internal();
+
+  // factory CatalogModel() => catModel;
 
   // Get Item by ID
   Item getById(int id) =>
@@ -32,13 +34,7 @@ class Item {
   final String color;
   final String image;
 
-  Item(
-      {required this.id,
-      required this.name,
-      required this.desc,
-      required this.price,
-      required this.color,
-      required this.image});
+  Item({this.id, this.name, this.desc, this.price, this.color, this.image});
 
   factory Item.fromMap(Map<String, dynamic> map) {
     return Item(
